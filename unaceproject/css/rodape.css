@@ -1,0 +1,15 @@
+.container-fluid{
+font-family: "catamaranregular","myriad-pro","Myriad Pro","sans-serif","Gill Sans", "Gill Sans MT";
+}
+
+.corpo{
+background-color:#00A650; 
+height:20%;
+color:white;
+font-size:13.5px;
+font-style:bold;
+font-family: "catamaranregular","myriad-pro","Myriad Pro","sans-serif","Gill Sans", "Gill Sans MT";
+bottom: 0;
+left: 0;
+width:100%;
+}    

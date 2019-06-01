@@ -1,0 +1,19 @@
+
+/* Dar espaçamento do topo para a imagem e definir o tamanho da imagem */
+.imagem2{
+margin:30px;
+width:70%;
+}
+
+.entrar{
+ width:100%;    
+}
+
+body{
+background-color:green;    
+}
+
+
+.container-fluid{
+font-family: "catamaranregular","myriad-pro","Myriad Pro","sans-serif","Gill Sans", "Gill Sans MT";
+}

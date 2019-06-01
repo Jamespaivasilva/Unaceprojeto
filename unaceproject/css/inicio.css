@@ -1,0 +1,48 @@
+
+.container-fluid{
+font-family: "catamaranregular","myriad-pro","Myriad Pro","sans-serif","Gill Sans", "Gill Sans MT";
+}
+
+.mostrar{
+margin:1px;
+background-color:#00A650;
+color:yellow;
+font-size:15px;
+border-radius:5px;
+}
+
+.mostrar h4{
+text-align:center;
+font-size:15px;
+}
+
+.mostrar b{
+text-align:right;
+}
+
+.foto{
+    width:120px;
+    height:125px;
+}
+
+.barra{
+    width:100px;
+    height:1px;
+    background-color:#00A650;
+}
+
+#card-header{
+    background-color:#00A650;
+    color:yellow;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #00A650;
+}
+
+.card-body{
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #00A650;
+}
+
+.card-footer{
+    color:black;
+    font-size:15px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #00A650;
+}

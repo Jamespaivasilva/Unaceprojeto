@@ -1,0 +1,39 @@
+
+.cor5:hover{
+color:#00A650;
+border:4px;
+font-size:16px; 
+font-family: "catamaranregular","myriad-pro","Myriad Pro","sans-serif","Gill Sans", "Gill Sans MT";
+}
+.cor5{
+font-size:16px; 
+font-style:none; 
+color:black;
+font-family: "catamaranregular","myriad-pro","Myriad Pro","sans-serif","Gill Sans", "Gill Sans MT";
+}
+
+.nav-item{
+color:black; 
+}
+.cormenu{
+background-color:#00A650;
+}
+
+.navbar{
+background-color:red;	
+}
+.dropdown-item{
+color:white;
+background-color:#00A650;
+font-family: "catamaranregular","myriad-pro","Myriad Pro","sans-serif","Gill Sans", "Gill Sans MT";
+}
+.dropdown-divider{
+background-color:black;
+color:black;
+}
+
+.dropdown-item:hover{
+color:yellow;
+background-color:#00A650;
+font-family: "catamaranregular","myriad-pro","Myriad Pro","sans-serif","Gill Sans", "Gill Sans MT";
+}
