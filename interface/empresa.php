@@ -1,6 +1,5 @@
 <?php
-   //ignorar erros e alertas
-   error_reporting(0);
+   
    //impedir que quem não acessou tenha acesso ao conteúdo da página!
    require_once("../classes/validar.php");
    
@@ -133,6 +132,6 @@
    <script src="../scripts/parsley.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 </body>
-<br/><br/><br/>
+
 <?php require_once("rodape.php");?>
 </html>
