@@ -1,6 +1,6 @@
 <?php
-   //ignorar erros e alertas
-   error_reporting(0);
+  
+
    //impedir que quem não acessou tenha acesso ao conteúdo da página!
    require_once("../classes/validar.php");
    
@@ -177,30 +177,7 @@
    <!-- CSS do Bootstrap -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-   
-   
-   <style>
-      .mytable {
-      max-width: 600px;
-      margin: 0 auto;
-      }
-      #myTable th, td {
-      white-space: nowrap;
-      }
-      table.dataTable thead .sorting:after,
-      table.dataTable thead .sorting:before,
-      table.dataTable thead .sorting_asc:after,
-      table.dataTable thead .sorting_asc:before,
-      table.dataTable thead .sorting_asc_disabled:after,
-      table.dataTable thead .sorting_asc_disabled:before,
-      table.dataTable thead .sorting_desc:after,
-      table.dataTable thead .sorting_desc:before,
-      table.dataTable thead .sorting_desc_disabled:after,
-      table.dataTable thead .sorting_desc_disabled:before {
-      bottom: .5em;
-      }
-   </style>
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css"> 
 </head>
 <body>
    <?php
@@ -976,6 +953,6 @@
    <!-- Script-->    
    <script src="../scripts/contribuicoes.js"></script>
 </body>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
 <?php require_once("rodape.php");?>
 </html>
