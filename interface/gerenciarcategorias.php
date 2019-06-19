@@ -1,6 +1,5 @@
 <?php
-   //ignorar erros e alertas
-   error_reporting(0);
+   
    //impedir que quem não acessou tenha acesso ao conteúdo da página!
    require_once("../classes/validar.php");
    
@@ -183,6 +182,6 @@
    <script src="../scripts/parsley.js"></script>
    <script src="../scripts/gerenciarcategorias.js"></script>
 </body>
-<br/><br/><br/><br/><br/>
+
 <?php require_once("rodape.php");?>
 </html>
