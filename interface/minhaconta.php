@@ -1,6 +1,5 @@
 <?php
-   //ignorar erros e alertas
-   error_reporting(0);
+   
    //impedir que quem não acessou tenha acesso ao conteúdo da página! 
    require_once("../classes/validar.php");
    
@@ -471,6 +470,5 @@
    </div>
    
 </body>
-<br/><br/><br/>
 <?php require_once("rodape.php");?>
 </html>
