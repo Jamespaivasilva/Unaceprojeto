@@ -21,31 +21,6 @@
      header('Location: ../interface/grupo.php?resultado=success');
  }
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
