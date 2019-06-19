@@ -1,7 +1,6 @@
 <?php
 require_once("conexao.php");
 require_once("endereco.php");
-//Define Charset UTF-8
 
 class Membro extends Endereco{
   private $cod_membro;
@@ -145,7 +144,7 @@ class Membro extends Endereco{
      
      $conexao = new Conexao();
      
-     $mudar =0 ;
+     $mudar = 0;
      
      date_default_timezone_set('America/Sao_Paulo');
      $data = date('Y-m-d'); 
@@ -203,6 +202,7 @@ class Membro extends Endereco{
         
             $cod_registro = $sql['cod_cad_grupo_empresa'];
             $substituto = $sql['repre_substituto'];
+	    
             //vamos zerar a participação do membro no grupo atual localizado $sql
             $query2 = mysqli_query($conexao->conectar(),"UPDATE juncao_grupo_empresa SET repre_substituto='0' where repre_substituto='$id_membro'");
             
@@ -233,15 +233,8 @@ class Membro extends Endereco{
         return true;
         }else{
         return false;
-        }
-      
-    
+    	} 
     }
-    
-
-   
-    
-   
  }
  
  
@@ -338,21 +331,19 @@ class Membro extends Endereco{
 
      $json = array(
           "cod_membro" => $sql['cod_membro'],
-          "nome" =>  iconv("UTF-8", "ISO-8859-1",$sql['nome_membro']),
+          "nome" =>  $sql['nome_membro'],
           "cpf" => $sql['cpf_membro'],
           "nascimento" => $sql['niver_membro'],
           "foto" => $sql['foto'],
-          "nome_empresa"=>iconv("UTF-8", "ISO-8859-1",$sql['nome_empresa']),
+          "nome_empresa"=>$sql['nome_empresa'],
           "cod_empresa" => $sql['cod_empresa'],
           "nivel_acesso" => $acesso ,
-          "usuario" => iconv("UTF-8", "ISO-8859-1", $sql['usuario']),
-          "papel" =>iconv("UTF-8", "ISO-8859-1", $sql['nome_papel']),
+          "usuario" => $sql['usuario'],
+          "papel" => $sql['nome_papel'],
           "validade" => $sql['membro_expira'],
-          "grupo" =>iconv("UTF-8", "ISO-8859-1", $sql2['nome_grupo']),
+          "grupo" =>$sql2['nome_grupo'],
           "cod_grupo"=>$sql2['cod_grupo'],
-          "cod_papel" => $sql['cod_papel'],
-          
-          
+          "cod_papel" => $sql['cod_papel'],       
      );
      
      
@@ -366,9 +357,9 @@ class Membro extends Endereco{
  //Verificar se o CPF já não está cadastrado.
 public function validarCPF($cpf){
     
-     $mysqli = new mysqli("localhost","u253536359_nuwe", "james56118992", "u253536359_nuwe") or die ("deu erro"); 
-    
-    $query = mysqli_query($mysqli,"SELECT * FROM membros where cpf_membro='$cpf'");
+     $conexao = new Conexao();
+	     
+    $query = mysqli_query($conexao->conectar(),"SELECT * FROM membros where cpf_membro='$cpf'");
     
     $numero = mysqli_num_rows($query);
         
@@ -378,11 +369,6 @@ public function validarCPF($cpf){
         return false;
     }
     
-}
-
-
-public function trueoufalse($resultado){
-    return $resultado;
 }
 
 public function validarSenha($usuario,$senha){
@@ -490,7 +476,7 @@ public function mudar($membro,$validar){
      $usuario = $membro ->getUsuario();
      $nivel = $membro ->getNivel();
      
-	$mysqli = new mysqli("35.199.110.234","unace", "james56118992", "u253536359_nuwe") or die ("deu erro");
+	$mysqli = new mysqli() or die ("deu erro");
     
     $query = mysqli_query($mysqli,"UPDATE membros SET cpf_membro = '$cpf', nome_membro = '$nome',niver_membro='$aniversario',foto='$foto' WHERE cod_membro='$cod_membro'");
     
@@ -616,11 +602,7 @@ public function mudarMembro($cod_grupo,$membro){
     }else{
         return false;
     }
-    
-     
-    }
-    
-    
+    	}
 }
     
 public function adicionarEmail($membroId,$email){
@@ -661,7 +643,7 @@ public function mudarEmail($emailId,$email){
 
 
 public function adicionarTelefone($membroId,$membro){
-    
+   
     $conexao = new Conexao();
     
     $ddd = $membro->getDdd();
@@ -712,9 +694,8 @@ public function mudarTelefone($telefoneId,$membro){
  
   //Inserir o membro nas tabelas do banco de dados
  public function inserir($membro){
-    
-     
-    $mysqli = new mysqli("35.199.110.234","unace", "james56118992", "u253536359_nuwe") or die ("deu erro");     
+     $mysqli = new mysqli();
+	 
      $cpf = $membro->getCpf();
      $nome = $membro->getNome();
      $aniversario = $membro->getAniversario();
@@ -756,7 +737,6 @@ public function mudarTelefone($telefoneId,$membro){
      for($i = 0;$i<$tamanho;$i++){
      //Inserir na tabela emails
      $query2 = mysqli_query($mysqli,"INSERT INTO emails(cod_email_membro,end_email) VALUES ('$id_membro','$email[$i]')") or die("deu erro");
-     
      }
      
      //Inserir na tabela telefone
@@ -776,12 +756,8 @@ public function mudarTelefone($telefoneId,$membro){
      //Validar se deu tudo certo.
      if($query==true && $query2==true && $query3==true && $query4==true){return true;}else{return false;}
      
-      }
-      
-
-     
+      }     
 }
-
 
 }
 
