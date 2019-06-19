@@ -3,8 +3,6 @@
    //impedir que quem não acessou tenha acesso ao conteúdo da página!
    require_once("../classes/validar.php");
    
-   
-   
    $validar = new Validar();
    $validar->sessao();
    
