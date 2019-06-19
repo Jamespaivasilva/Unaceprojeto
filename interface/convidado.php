@@ -1,11 +1,8 @@
 <?php
-   //ignorar erros e alertas
-   error_reporting(0);
+   
    //impedir que quem não logou, tenha acesso ao conteúdo da página!
    require_once("../classes/validar.php");
-   
-   
-   
+ 
    $validar = new Validar();
    $validar->sessao();
         // Conectar ao banco, pra que ? Para puxar todos os registros de categorias
@@ -160,6 +157,6 @@
    <script src="../scripts/convidado.js"></script>
    <script src="../scripts/parsley.js"></script>
 </body>
-<br/><br/><br/>
+
 <?php require_once("rodape.php");?>
 </html>
