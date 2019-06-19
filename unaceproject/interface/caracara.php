@@ -1,12 +1,10 @@
 <?php
-   //ignorar erros e alertas
-   error_reporting(0);
+   
    //impedir que quem não logou, tenha acesso ao conteúdo da página!
    require_once("../classes/validar.php");
-   
-   
-   
+
    $validar = new Validar();
+
    $validar->sessao();
         // Conectar ao banco, pra que ? Para puxar todos os registros de categorias
         require_once('../classes/conexao.php');
@@ -20,9 +18,7 @@
          //Fazer a pesquisa no banco para listar empresas
          $query = mysqli_query($conexao->conectar(),"SELECT * FROM membros");
          $membro = $_SESSION['id'];
-         
-         
-   
+           
      ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -140,6 +136,6 @@
    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
    <script src="../scripts/parsley.js"></script>
 </body>
-<br/><br/><br/>
+
 <?php require_once("rodape.php");?>
 </html>
