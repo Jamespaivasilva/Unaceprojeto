@@ -320,6 +320,6 @@
    <script src="../scripts/parsley.js"></script>
    <script src="../scripts/gerenciarmembros.js"></script>
 </body>
-<br/><br/><br/><br/><br/>
+
 <?php require_once("rodape.php");?>
 </html>
