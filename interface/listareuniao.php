@@ -1,6 +1,5 @@
 <?php
-   //ignorar erros e alertas
-   error_reporting(0);
+  
    //impedir que quem não acessou tenha acesso ao conteúdo da página!
    require_once("../classes/validar.php");
    
@@ -118,8 +117,8 @@
       type: 'post',
       url: '../funcionalidade/listargrupo.php',
             data:{valor:valor},
-        success:function(data){
-            $('.carregar').html(data);  
+            success:function(data){
+               $('.carregar').html(data);  
             }
       
       })
@@ -128,28 +127,23 @@
       });
       
       <?php if(isset($_GET['selecionado'])){ ?>
-          
            var valor = <?php echo $_GET['selecionado']; ?>
-          
           $.ajax({
-      type: 'post',
-      url: '../funcionalidade/listargrupo.php',
+            type: 'post',
+            url: '../funcionalidade/listargrupo.php',
             data:{valor:valor},
-        success:function(data){
-            $('.carregar').html(data);  
+            success:function(data){
+               $('.carregar').html(data);  
             }
-          
-          
+      
          })
          
          <?php }?>
       });
          
-      
-      
-      
+
    </script>
 </body>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
 <?php require_once("rodape.php");?>
 </html>
