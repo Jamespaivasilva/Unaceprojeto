@@ -92,7 +92,7 @@ public function Inserir($reuniao){
       $endereco = $reuniao->getEndereco();
       $disponibilidade =$reuniao->getDisponibilidade();
      
-     $mysqli = new mysqli("localhost","u253536359_nuwe", "james56118992", "u253536359_nuwe") or die ("deu erro");
+     $mysqli = new mysqli() or die ();
      
      $query = mysqli_query($mysqli,"INSERT INTO reunioes(cod_data_reuniao,cod_grupo_grupo,titulo_reuniao,cod_endereco) VALUES('$disponibilidade','$grupo','$titulo','$endereco')") or die("error");
      
