@@ -8,7 +8,7 @@ class Conexao{
  
  
  function conectar(){
-    $mysqli = new mysqli("35.199.110.234","unace", "james56118992", "u253536359_nuwe") or die ("deu erro");
+    $mysqli = new mysqli("","unace", "", "") or die ();
     
     $mysqli->set_charset('utf8');
     
