@@ -1,10 +1,6 @@
 <?php
-   //ignorar erros e alertas
-   error_reporting(0);
    //impedir que quem não logou, tenha acesso ao conteúdo da página!
    require_once("../classes/validar.php");
-   
-   
    
    $validar = new Validar();
    $validar->sessao();
@@ -140,6 +136,6 @@
    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
    <script src="../scripts/parsley.js"></script>
 </body>
-<br/><br/><br/>
+   
 <?php require_once("rodape.php");?>
 </html>
