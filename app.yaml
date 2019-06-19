@@ -1,6 +1,0 @@
-# app.yaml
-runtime: php72
-api_version: 1
-
-handlers /.*
-script: index.php
